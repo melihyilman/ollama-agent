@@ -3,6 +3,7 @@
     const chatContainer = document.getElementById('chat-container');
     const promptInput = document.getElementById('prompt-input');
     const submitButton = document.getElementById('submit-button');
+    const newChatButton = document.getElementById('new-chat-button');
     const statusBar = document.getElementById('status-bar');
 
     let assistantMessageElement = null;
@@ -30,6 +31,9 @@
     }
 
     submitButton.addEventListener('click', submitPrompt);
+    newChatButton.addEventListener('click', () => {
+        vscode.postMessage({ command: 'newChat' });
+    });
 
     promptInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
@@ -160,6 +164,10 @@
                     }
                     assistantMessageElement = null;
                 }
+                break;
+            case 'clearChat':
+                chatContainer.innerHTML = '';
+                assistantMessageElement = null;
                 break;
         }
         chatContainer.scrollTop = chatContainer.scrollHeight;
