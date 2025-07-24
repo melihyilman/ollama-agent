@@ -1,0 +1,65 @@
+
+body {
+    font-family: var(--vscode-font-family);
+    color: var(--vscode-editor-foreground);
+    background-color: var(--vscode-editor-background);
+    padding: 1em;
+}
+
+.input-container {
+    display: flex;
+    padding-top: 1em;
+}
+
+#prompt-input {
+    width: 100%;
+    border: 1px solid var(--vscode-input-border);
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    padding: 0.5em;
+    resize: none;
+}
+
+#submit-button {
+    border: 1px solid var(--vscode-button-border);
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+.message {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+.user {
+    background-color: var(--vscode-list-activeSelectionBackground);
+    color: var(--vscode-list-activeSelectionForeground);
+}
+
+.assistant {
+    background-color: var(--vscode-list-inactiveSelectionBackground);
+}
+
+.status-bar-offline {
+    background-color: var(--vscode-statusBarItem-errorBackground);
+    color: var(--vscode-statusBarItem-errorForeground);
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.status-bar-online {
+    background-color: var(--vscode-statusBarItem-remoteBackground);
+    color: var(--vscode-statusBarItem-remoteForeground);
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}

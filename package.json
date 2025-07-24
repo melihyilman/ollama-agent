@@ -1,0 +1,39 @@
+{
+  "name": "ollama-agent",
+  "displayName": "Ollama Agent",
+  "description": "A simple VS Code agent that uses Ollama to execute commands.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ollama-agent-container",
+          "title": "Ollama Agent",
+          "icon": "$(beaker)"
+        }
+      ]
+    },
+    "views": {
+      "ollama-agent-container": [
+        {
+          "id": "ollama-agent-sidebar",
+          "name": "Chat",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0"
+  }
+}
